@@ -1,0 +1,28 @@
+//Return all the palindromes in an array
+
+//array function
+var palin = (arr)=>
+{
+  var result = [];
+  for(var i=0;i<arr.length;i++)
+  {
+     
+   var a, b, no, temp = 0;  
+    no = arr[i];
+    b = no;  
+    while (no > 0)  
+    {  
+      a = no % 10;  
+      no = parseInt( no / 10);  
+      temp = temp*10 + a;  
+    }  
+    if (temp == b)  
+    {  
+      result.push(b);
+    }
+  }
+  return result;
+}
+var arr = [123,151,727,566,111];
+console.log(palin(arr));
+
