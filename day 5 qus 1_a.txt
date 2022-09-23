@@ -1,0 +1,33 @@
+//Print odd numbers in an array
+
+//Anonymous function
+
+var res = function(arr){
+ 
+  var arr1 = [];
+  for(var i=0;i<arr.length;i++)
+  {
+    if(arr[i]%2 != 0)
+    {
+      arr1.push(arr[i]);
+    }
+  }
+  return arr1;
+}
+ var arr = [4,3,5,2,1];
+console.log(res(arr));
+
+//IIFE function
+var arr = [4,3,5,2,1];
+(function(arr){
+ 
+  var arr1 = [];
+  for(var i=0;i<arr.length;i++)
+  {
+    if(arr[i]%2 != 0)
+    {
+      arr1.push(arr[i]);
+    }
+  }
+  console.log( arr1);
+})([4,3,5,2,1]);

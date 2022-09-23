@@ -1,0 +1,25 @@
+//Rotate an array by k times
+// anonymous function
+const rotate = function(arr, k) {
+
+  for (let i = 0; i < k; i++) {
+      arr.unshift(arr.pop());
+      //The unshift() method adds one or more elements to 
+      //the beginning of an array.
+  }
+
+  return arr;
+}
+var arr = [1,2,3,4,5];
+console.log(rotate(arr,3));
+
+// IIFE function
+(function(arr, k) {
+
+  for (let i = 0; i < k; i++)
+    {
+      arr.unshift(arr.pop());
+    }
+
+  console.log(arr);
+})([1,2,3,4,5],3);

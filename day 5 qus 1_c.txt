@@ -1,0 +1,25 @@
+//Sum of all numbers in an array
+//Anonymous Function
+
+var sum = function(arr)
+{
+  var temp = 0;
+  for(var i=0;i<arr.length;i++)
+  {
+    temp += arr[i];
+  }
+  return temp;
+}
+var arr = [1,2,3,4,5,6,7];
+console.log("Sum of the array elements : "+ sum(arr));
+
+//IIFE function
+(function(arr)
+{
+  var temp = 0;
+  for(var i=0;i<arr.length;i++)
+  {
+    temp += arr[i];
+  }
+ console.log(temp);
+})([1,2,3,4,5,6,7]);
